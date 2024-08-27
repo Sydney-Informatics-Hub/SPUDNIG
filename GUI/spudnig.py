@@ -297,7 +297,7 @@ class GUI:
                 detection_proc = subprocess.Popen(self.detection_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                 out, err = detection_proc.communicate()
                 if detection_proc.returncode != 0:
-                    raise Exception(f"Error in OpenPose processing: {err.decode('utf-8')}")
+                    raise Exception(f"Error in OpenPose processing:")
             except Exception as e:
                 tk.messagebox.showerror("OpenPose Error", str(e))
                 return
